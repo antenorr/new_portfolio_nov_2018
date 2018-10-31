@@ -1,0 +1,48 @@
+.Navigator {
+    border: 1px solid red;
+}
+
+.navIcon {
+    width: 30px;
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    width:200px;
+    height: 100%;
+    background: rgba(180, 178, 178, 0.479);
+    left: -200px;
+    transition: all 600ms linear;
+}
+.sidebar.true {
+    left: 0px;
+}
+
+.sidebar ul li {
+    color: rgba(28, 163, 163, 0.9);
+    list-style: none;
+    padding: 15px 20px;
+  
+    border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+.sidebar ul {
+    padding-left: 3px;
+
+}
+
+.toggler {
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    
+   
+}
+.brand {
+    display: inline-block;
+}
+
+
+.inline {
+    margin-right: 10px;
+}

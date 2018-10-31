@@ -1,0 +1,20 @@
+{
+  "name": "muse",
+  "version": "1.0.0",
+  "description": "This application serves as the blog and portfolio of Roudy Antenor",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.2.0",
+    "password-generator": "^2.2.0"
+  }
+}
