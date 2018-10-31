@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import Navigator from './Navigator/Navigator'
+import Navigator from './Navigator/Navigator';
+import LabelBottomNavigation from './LabelBottomNavigation/LabelBottomNavigation';
+import ButtonAppBar from './ButtonAppBar/ButtonAppBar';
+import Button from '@material-ui/core/Button';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
 
 class App extends Component {
@@ -22,7 +26,7 @@ class App extends Component {
   }
 
 
-  // Get the passwords and store them in state
+  // Get the passwords and store them into upon launch automatically state
   getPasswords = () => {
     fetch('/apix')
       .then((response) => {
@@ -35,6 +39,8 @@ class App extends Component {
      
   }
 
+
+  //This function will query node to query spacex API
 nasaData = () => {
   fetch(`/api/spacex`, {method: 'GET'})
     .then((response)=>{
@@ -52,9 +58,15 @@ nasaData = () => {
 
 
   render() {
-    // const { passwords } = this.state;
+
     return (
       <div> 
+        <ButtonAppBar />
+        <LabelBottomNavigation />
+
+  
+        {/* <FullNavbar /> */}
+        {/* below is the navigator toggle/ the button / the inital call to one two three mapped /  and call to spacex mapped
         <Navigator toggleToggler={this.toggleToggler} presentTogglePosition={this.state.isActive}/>
 
             <button
@@ -66,9 +78,8 @@ nasaData = () => {
         {this.state.passwords.map( (element, idx) => <span key={idx}>{element.answer}</span>)}
         {this.state.nasaData.length > 0 ? (
           this.state.nasaData.map((ele, idx) => <h2 key={idx}>{ele.mission_name} </h2>)
-        ) : null
-          
-        }
+          ) : null
+        } */}
       </div>    
 
     );
