@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import Navigator from './Navigator/Navigator';
 import LabelBottomNavigation from './LabelBottomNavigation/LabelBottomNavigation';
 import ButtonAppBar from './ButtonAppBar/ButtonAppBar';
-import Button from '@material-ui/core/Button';
+import Jumbotron from './Jumbotron/Jumbotron';
+
+
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
 
@@ -61,12 +63,23 @@ nasaData = () => {
 
     return (
       <div> 
-        <ButtonAppBar />
+        <ButtonAppBar /> 
         <LabelBottomNavigation />
+        <Jumbotron />
 
   
-        {/* <FullNavbar /> */}
-        {/* below is the navigator toggle/ the button / the inital call to one two three mapped /  and call to spacex mapped
+
+      </div>    
+
+    );
+  }
+}
+
+export default App;
+
+/*
+
+ below is the navigator toggle/ the button / the inital call to one two three mapped /  and call to spacex mapped
         <Navigator toggleToggler={this.toggleToggler} presentTogglePosition={this.state.isActive}/>
 
             <button
@@ -79,12 +92,5 @@ nasaData = () => {
         {this.state.nasaData.length > 0 ? (
           this.state.nasaData.map((ele, idx) => <h2 key={idx}>{ele.mission_name} </h2>)
           ) : null
-        } */}
-      </div>    
-
-    );
-  }
-}
-
-export default App;
-
+        } 
+        */
